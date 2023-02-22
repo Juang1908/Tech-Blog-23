@@ -19,3 +19,18 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
+
+// BACKUP IF TOP DOES NOT WORK
+
+// const sequelize = process.env.JAWSDB_URL
+//   ? new Sequelize(process.env.JAWSDB_URL)
+//   : new Sequelize(
+//     process.env.DB_NAME,
+//     process.env.DB_USER,
+//     process.env.DB_PASSWORD,
+//     {
+//       host: '127.0.0.1',
+//       dialect: 'mysql',
+//       port: 3306,
+//     },
+//   );
