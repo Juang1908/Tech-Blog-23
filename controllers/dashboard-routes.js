@@ -19,7 +19,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    res.render('dashboard', { posts, logged_in: true });
+    res.render('dashboard', { posts, loggedIn: true });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -27,7 +27,7 @@ router.get('/', withAuth, async (req, res) => {
 
 // Get form to create new post
 router.get('/new', withAuth, (req, res) => {
-  res.render('new-post', { logged_in: true });
+  res.render('new-post', { loggedIn: true });
 });
 
 // Get form to edit existing post
@@ -49,7 +49,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render('edit-post', { post, logged_in: true });
+    res.render('edit-post', { post, loggedIn: true });
   } catch (err) {
     res.status(500).json(err);
   }

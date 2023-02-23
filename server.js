@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({ helpers });
 
+
 // Session middleware
 const sess = {
   secret: 'Super secret secret',
@@ -29,6 +30,14 @@ const sess = {
 
 app.use(session(sess));
 
+// Import routes
+const homeRoutes = require('./controllers/home-routes');
+const dashboardRoutes = require('./controllers/dashboard-routes');
+const apiRoutes = require('./controllers/api');
+// Use imported routes
+app.use('/', homeRoutes);
+app.use('/dashboard', dashboardRoutes);
+app.use('/api', apiRoutes);
 
 // Handlebars middleware
 app.engine('handlebars', hbs.engine);
@@ -38,7 +47,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
+// set up Routes
 app.use(routes);
 
 // Connect to database and start server
