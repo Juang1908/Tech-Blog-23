@@ -1,0 +1,89 @@
+/* styles for the entire site */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #eee;
+  }
+  
+  .content {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #333;
+  }
+  
+  .alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  .alert-danger {
+    background-color: #d9534f;
+  }
+  

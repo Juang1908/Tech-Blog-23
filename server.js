@@ -7,7 +7,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 // WORKING ON THSE TWO
-const routes = require('./controllers/api');
+const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 // PORT 3001
