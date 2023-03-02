@@ -1,0 +1,16 @@
+{{#if posts.length}}
+  <h3>Your Posts:</h3>
+  <ol class="list-group list-group-numbered">
+    {{#each posts}}
+      <li class="list-group-item">
+        <a href="/post/{{this.id}}">{{this.title}}</a>
+        <a href="/api/posts/{{this.id}}" class="btn btn-secondary btn-sm">Edit Post</a>
+      </li>
+    {{/each}}
+  </ol>
+{{else}}
+  <p>You haven't created any posts yet.</p>
+{{/if}}
+
+<a href="/dashboard/new" class="btn btn-secondary btn-md mt-2">Add New Post</a>
+

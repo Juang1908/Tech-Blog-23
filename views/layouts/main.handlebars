@@ -9,25 +9,26 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
-</html>
-  <body>
-     <header>
+<body>
+  <header>
     <h1>Welcome to TECH-BLOG-23</h1>
   </header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {{#if loggedIn}}
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/logout">Log Out</a></li>
-        {{else}}
-        <li><a href="/login">Log In</a></li>
-        <li><a href="/signup">Sign Up</a></li>
-        {{/if}}
-      </ul>
-    </nav>
-    <div class="content">
-      {{{body}}}
-    </div>
-  </body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      {{#if loggedIn}}
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Log Out</a></li>
+      {{else}}
+      <li><a href="/login">Log In</a></li>
+      <li><a href="/signup">Sign Up</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+  <div class="content">
+    {{{body}}}
+  </div>
+</body>
+
 </html>
+
